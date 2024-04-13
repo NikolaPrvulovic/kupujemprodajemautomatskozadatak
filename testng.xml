@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Kupujem-Prodajem - QA Specialist - Tasks for candidates">
+    <listeners>
+        <listener class-name="org.testng.reporters.EmailableReporter"/>
+        <listener class-name="helper.DeleteOldReportListener"/>
+    </listeners>
+    <test name="Acceptance">
+        <classes>
+            <class name="tests.SearchByCriteriaTests"/>
+            <class name="tests.AdresarTests"/>
+        </classes>
+    </test> <!-- Test -->
+</suite> <!-- Suite -->
