@@ -106,12 +106,14 @@ public class AdsPage extends BasePage{
                 By.xpath("//div[@class='BreadcrumbHolder_breadcrumbHolder__riFtq']//span//span"))
                 .getText().split(" ");
 
-
         int numberOfResults = Integer.parseInt(splitted[0].replace(".", ""));
+
         Assert.isTrue(numberOfResults > number,
                 "Number of results is lower than expected: " + numberOfResults);
 
-
+        wait.until(ExpectedConditions.textToBe(
+                By.xpath("//div[@class='BreadcrumbHolder_breadcrumbHolder__riFtq']//span//span"),
+                splitted[0] + " " + splitted[1]));
     }
 
 
